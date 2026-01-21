@@ -19,6 +19,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Run Unit Tests
+        working-directory: order-service
         # On exclut explicitement le test d'intégration ici
         run: mvn test -Dtest=PricingServiceTest,PasswordPolicyTest
 
