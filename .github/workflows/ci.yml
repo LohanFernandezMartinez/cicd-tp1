@@ -36,5 +36,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Run Integration Tests
+        working-directory: order-service
         # On lance uniquement le test d'intégration
         run: mvn test -Dtest=PricingIntegrationTest
